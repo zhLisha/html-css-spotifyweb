@@ -36,6 +36,11 @@ ul {
     list-style-type: none;
 }
 
+img {
+    width: 100%;
+    display: block;
+}
+
 /********************
         MAIN 
 *********************/
@@ -45,26 +50,57 @@ ul {
 }
 
 .nav-left{
-    width: 250px;
+    width: 200px;
     overflow: hidden;
+    font-size: 12px;
     /* test */
-    background-color: coral;
+    background-color: #000000;
 }
+
+.logo img{
+    width: 150px;
+    padding: 15px 15px;
+}
+
+.nav-left .nav-left-icons{
+    
+}
+
+.home {
+    width: 50px;
+}
+
+.home span{
+    color: var(--white);
+    line-height: 30px;
+}
+
+.home .nav-left-icons{
+    width: 35px;
+    padding-left: 15px;
+    border-left: 2px solid yellow;
+}
+
+
 
 
 /* MAIN CONTENT*/
 .main-content{
-    width: calc(100vw - 250px);
+    width: calc(100% - 200px);
     overflow-y: auto;
     height: padding;
     /* test */
     background-color: #141922;
 }
 
+.main-content h2, h3{
+    color: var(--white);
+}
+
 /* UPGRADE */
 .upgrade{
     height: 70px;
-    width: calc(100vw - 250px);
+    width: calc(100% - 200px);
     position: fixed;
     background-color: #080f129b;
     justify-content: flex-end; 
@@ -83,8 +119,7 @@ ul {
 /* MAIN ITEMS */
 .main-items{
     padding-top: 85px;
-    width: 97%;
-    max-width: 970px;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -105,7 +140,6 @@ ul {
     color: var(--grey);
 }
 
-
 .actions-list .underline:after{
     content: "";
     margin: 0 auto;
@@ -116,8 +150,40 @@ ul {
 }
 
 
+/* Section 1 Recently Played ------------------------------------- */
+.container-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+    position: relative;
+}
 
-/* Section 1 */
+.card {
+    color: var(--grey);
+    width: calc((100% / 6) - 10px);
+    padding: 25px 0;
+    text-align: center;
+
+    /* test */
+    /* width: 200px;
+    height: 200px; */
+}
+
+.recently-played h2{
+    font-size: 20px;
+}
+
+.card span{
+    color: var(--grey);
+    font-size: 10px;
+}
+
+.card h3{
+    font-size: 13px;
+    padding-top: 15px;
+    padding-bottom: 2px;
+}
+/* ----------------------------------------------------------------- */
 
 
 
@@ -141,11 +207,13 @@ ul {
 *************************************/
 
 
-@media screen and ( max-width: 1100px ) {
-    .actions-list ul li{
-        
+@media screen and ( max-width: 1100px ){
+    /* Section 1 Recently Played */
+    .card {
+        width: calc((100% / 4) - 10px);
     }
 }
+
 
 
 @media screen and ( max-width: 700px ){
