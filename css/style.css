@@ -81,7 +81,7 @@ img {
     border-left: 2px solid yellow;
 }
 
-
+ 
 
 
 /* MAIN CONTENT*/
@@ -209,8 +209,12 @@ img {
 
 @media screen and ( max-width: 1100px ){
     /* Section 1 Recently Played */
+    .container-card {
+        justify-content: flex-start;
+    }
     .card {
-        width: calc((100% / 4) - 10px);
+        width: calc(100% / 4);
+        padding-right: 10px;
     }
 }
 
