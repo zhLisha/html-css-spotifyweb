@@ -1,3 +1,9 @@
+/* VARIABLES */
+:root {
+    --white: #ffffff;
+    --grey: #7d7f84;
+}
+
 /* RESET */
 *{
     margin: 0;
@@ -12,6 +18,18 @@ body {
 
 .flex-container{
     display: flex;
+}
+
+.btn{
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    padding: 10px 35px;
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
 }
 
 /********************
@@ -32,11 +50,20 @@ body {
 /* UPGRADE */
 .upgrade{
     height: 70px;
-    width: 100%;
+    width: calc(100vw - 170px);
     position: fixed;
-
-    /* test */
     background-color: #080f129b;
+    justify-content: flex-end; 
+    align-items: center; 
+    padding-right: 10px;
+}
+
+.upgrade .button a{
+    font-size: 10px; 
+}
+
+.button:hover {
+    transform: scale(1.1);
 }
 
 /* MAIN CONTENT*/
@@ -69,4 +96,26 @@ body {
 
     /* test */
     background-color: lightpink;
+}
+
+
+
+
+
+/************************************
+    MEDIA QUERY DESKTOP FIRST 
+*************************************/
+
+/* XS SCREEN */
+@media screen and ( max-width: 600px ) {
+    .nav-left{
+        width: 45px;
+    }
+    .main-content{
+        width: calc(100vw - 45px);
+    }
+
+    .upgrade {
+        width: calc(100vw - 45px );
+    }
 }
