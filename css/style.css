@@ -28,6 +28,12 @@ body {
     display: inline-block;
 }
 
+.card span{
+    color: var(--grey);
+    font-size: 11px;
+    line-height: 30px;
+}
+
 a{
     text-decoration: none;
 }
@@ -62,10 +68,6 @@ img {
     padding: 15px 15px;
 }
 
-.nav-left .nav-left-icons{
-    
-}
-
 .home {
     width: 50px;
 }
@@ -80,8 +82,6 @@ img {
     padding-left: 15px;
     border-left: 2px solid yellow;
 }
-
- 
 
 
 /* MAIN CONTENT*/
@@ -151,32 +151,22 @@ img {
 }
 
 
-/* Section 1 Recently Played ------------------------------------- */
+/* Section 1 Recently Played */
 .container-card {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;  
-    position: relative;
+    flex-wrap: wrap; 
 }
 
 .card {
     color: var(--grey);
-    width: calc((100% / 6) - 10px);
-    padding: 25px 0;
+    width: calc(100% / 6);
+    padding-right: 10px;
+    padding-top: 15px;
     text-align: center;
-
-    /* test */
-    /* width: 200px;
-    height: 200px; */
 }
 
 .recently-played h2{
     font-size: 20px;
-}
-
-.card span{
-    color: var(--grey);
-    font-size: 10px;
+    padding-bottom: 10px;
 }
 
 .card h3{
@@ -184,7 +174,28 @@ img {
     padding-top: 15px;
     padding-bottom: 2px;
 }
-/* ----------------------------------------------------------------- */
+
+
+/* Section 2 Created for User */
+.for-user .container-card{
+    justify-content: flex-start;  
+}
+
+.for-user .card {
+    width: calc(100% / 6);
+    padding-right: 10px;
+}
+
+.for-user h2 {
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.for-user span{
+    color: var(--grey);
+    font-size: 11px;
+    line-height: 30px;
+}
 
 
 
@@ -203,33 +214,47 @@ img {
 
 
 
+
+
+
 /************************************
     MEDIA QUERY DESKTOP FIRST 
 *************************************/
 
-
+/* MD SCREEN -------------------------------------*/
 @media screen and ( max-width: 1100px ){
     /* Section 1 Recently Played */
-    .container-card {
-        justify-content: flex-start;
-    }
-    .card {
+    .recently-played .card {
         width: calc(100% / 4);
-        padding-right: 10px;
+        padding-top: 0px;
+    }
+
+    /* Section 2 Created for User */
+    .for-user .card {
+        width: calc(100% / 4);
     }
 }
 
 
 
+
+/* S SCREEN ----------------------------------------*/
 @media screen and ( max-width: 700px ){
-    .card {
-        width: calc( (100% / 2) - 10px );
+      /* Section 1 Recently Played */
+    .recently-played .card {
+        width: calc(100% / 2);
+    }
+
+    /* Section 2 Created for User */
+    .for-user .card {
+        width: calc(100% / 2);
     }
 }
 
 
 
-/* XS SCREEN */
+
+/* XS SCREEN -------------------------------------*/
 @media screen and ( max-width: 600px ) {
     .nav-left{
         width: 45px;
