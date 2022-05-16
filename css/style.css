@@ -2,6 +2,9 @@
 :root {
     --white: #ffffff;
     --grey: #7d7f84;
+    --h2padding-small: 10px;
+    --h2padding-big: 30px;
+    --h2font-size: 20px
 }
 
 /* RESET */
@@ -26,6 +29,12 @@ body {
     border-radius: 20px;
     padding: 10px 35px;
     display: inline-block;
+}
+
+.square-img-box{
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .card span{
@@ -88,9 +97,8 @@ img {
 .main-content{
     width: calc(100% - 200px);
     overflow-y: auto;
-    height: padding;
-    /* test */
     background-color: #141922;
+    padding-bottom: 50px;
 }
 
 .main-content h2, h3{
@@ -165,8 +173,8 @@ img {
 }
 
 .recently-played h2{
-    font-size: 20px;
-    padding-bottom: 10px;
+    font-size: var(--h2font-size);
+    padding-bottom: var(--h2padding-small);
 }
 
 .card h3{
@@ -181,17 +189,24 @@ img {
     justify-content: flex-start;  
 }
 
-.for-user .card {
-    width: calc(100% / 6);
-    padding-right: 10px;
-}
-
 .for-user h2 {
-    font-size: 20px;
+    font-size: var(--h2font-size);
     padding-top: 30px;
 }
 
 .for-user span{
+    color: var(--grey);
+    font-size: 11px;
+    line-height: 30px;
+}
+
+
+/* Section 3 Most Popular */
+.most-popular h2{
+    font-size: var(--h2font-size);
+    padding-top: var(--h2padding-big);
+}
+.most-popular span{
     color: var(--grey);
     font-size: 11px;
     line-height: 30px;
@@ -228,12 +243,21 @@ img {
         width: calc(100% / 4);
         padding-top: 0px;
     }
+    .recently-played h2{
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
 
     /* Section 2 Created for User */
     .for-user .card {
         width: calc(100% / 4);
     }
-}
+
+    /* Section  3 Most Popular*/
+    .most-popular .card {
+        width: calc(100% / 4);
+    }
+}   
 
 
 
@@ -249,6 +273,12 @@ img {
     .for-user .card {
         width: calc(100% / 2);
     }
+
+    /* Section  3 Most Popular*/
+    .most-popular .card {
+        width: calc(100% / 2);
+    }
+    
 }
 
 
