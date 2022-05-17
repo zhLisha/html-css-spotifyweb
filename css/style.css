@@ -17,6 +17,7 @@
 /* COMMON */
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 .flex-container{
@@ -45,6 +46,7 @@ body {
 
 a{
     text-decoration: none;
+    color: inherit;
 }
 
 ul {
@@ -334,55 +336,49 @@ img {
     height: 80px;
     background-color: #282828;
     color: white;
+    justify-content: space-between;
 }
-
-.bottom-content {
-    width: 100%;
-}
-
-.nav-bottom {
-    width: 100%;
+.bottom-actions ul{
+    width: calc(100% / 3);
+    align-items: center;
 }
 
 /* left */
-.nav-bottom.left {
-    align-items: center;
+.bottom-actions-left{
+
+    /* test */
+    background-color: darksalmon;
 }
 
-.nav-bottom.left img{
-    width: 10%;
+.bottom-actions-left img{
+    width: 45px;
 }
 
-.nav-bottom.left .icons,
-.nav-bottom.left .text span {
-    color: var(--grey);
-}
 
 /* center */
-.nav-bottom.center{
-    align-items: center;
-    justify-content: center;
+.bottom-actions-center{
+
+    /* test */
+    background-color: lightpink;
 }
 
-.nav-bottom.center i{
-    padding: 0 10px;
-}
-.fa-regular.fa-circle-play{
-    font-size: 27px;
-}
 
-.nav-bottom.center hr {
-    margin: 10px 0;
-    padding: 1px ;
-    border-radius: 10px;
-    background-color: var(--grey);
-}
+/* .minutes-listened, 
+.minutes-remained {
+    font-size: 9px;
+    align-items: flex-end;
+    padding-top: 27px;
+    padding-right: 20px;
+    padding-left: 20px;
+} */
 
 
 /* right */
-.nav-bottom.right {
-    align-items: center;
-    justify-content: center;
+.bottom-actions-right {
+    justify-content: flex-end;
+
+    /* test */
+    background-color: mediumturquoise;
 }
 
 
