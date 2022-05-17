@@ -32,7 +32,7 @@ body {
 }
 
 .square-img-box{
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -64,22 +64,24 @@ img {
     height: calc(100vh - 80px);
 }
 
-.menu-left-big {
-    width: 100%;
-}
-
 /* NAVE LEFT */
 
 .nav-left{
     width: 200px;
-    overflow: hidden;
+    overflow-y: hidden;
     font-size: 12px;
     background-color: #000000;
 }
 
 .logo img{
+    height: 60px;
     width: 130px;
     padding: 15px 17px;
+}
+
+.nav-left-content {
+    height: calc(100vh - 140px);
+    flex-direction: column;
 }
 
 .nav-left-content .nav-left-action span{
@@ -116,11 +118,10 @@ img {
 }
 
 /* Playlist */
-
 .playlist {
     margin: 0 auto;
     width: 83%;
-    padding-left: 0;
+    flex-grow: 1;
 }
 
 .playlist h5{
@@ -129,14 +130,70 @@ img {
     color: var(--white);
 }
 
-.create-playlist i{
-    color: #000000;
-    font-size: 40px;
-    filter: invert(0.5);
-    vertical-align: middle;
-    padding:0 7px 5px 0;
+.playlist-name{
+    overflow: hidden;
+    overflow-y: auto;
+    height: 70%;
 }
+
+.create-playlist i{
+    height: 30px;
+    width: 30px;
+    color: #000000;
+    font-size: 23px;
+    vertical-align: middle;
+    background-color: #7d7f84;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* Nav left bottom */
+.nav-left-bottom {
+    height: 80px;
+    width: 83%;
+    margin: 0 auto;
+}
+
+.nav-left-bottom hr{
+    opacity: 50%;
+}
+
+.download{
+    padding-bottom: 5px;
+}
+
+.download img{
+   width: 20px; 
+   opacity: 50%;
+}
+
+.download span{
+    color: var(--grey);
+    padding-left: 10px;
+}
+
+.user {
+    padding-top: 10px;
+}
+
+.user img{
+    width: 25px;
+    height: 25px;
+    background-color: #7d7f84;
+}
+
+.user span{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 15px;
+}
+
 /* Menu small */
+.menu-left-small {
+    display: none;
+}
+
 .logo-small img{
     width: 60%;
     margin: 0 auto;
@@ -145,17 +202,11 @@ img {
 
 .home-small img, 
 .search-small img, 
-.library-small img {
+.library-small img{
     width: 50%;
     margin: 0 auto;
     padding-top: 10px;
 }
-
-.menu-left-small {
-    display: none;
-}
-
-
 
 /* MAIN CONTENT*/
 .main-content{
@@ -276,22 +327,13 @@ img {
     line-height: 30px;
 }
 
-
-
-
 /******************
     BOTTOM NAV
 *******************/
 .bottom-actions{
     height: 80px;
-
-    /* test */
-    background-color: lightpink;
+    background-color: #282828;
 }
-
-
-
-
 
 
 
@@ -350,15 +392,6 @@ img {
 
 /* XS SCREEN -------------------------------------*/
 @media screen and ( max-width: 600px ) {
-    /* Nav Left */
-    .menu-left-big {
-        display: none;
-    }
-
-    .menu-left-small {
-        display: block;
-    }
-
     .nav-left{
         width: 45px;
     }
@@ -370,4 +403,36 @@ img {
         width: calc(100vw - 45px );
     }
 
+    /* Nav Left */
+    .menu-left-big {
+        display: none;
+    }
+
+    .menu-left-small {
+        display: flex;
+        height: calc(100vh - 80px);
+        flex-direction: column;
+    }
+
+    .menu-left-small-top {
+        flex-grow: 1;
+    }
+
+
+    /* Nav left Bottom */
+    .user img{
+        width: 25px;
+        height: 25px;
+        background-color: #7d7f84;
+    }
+    .download img{
+        width: 20px; 
+        opacity: 50%;
+     }
+
+     .menu-left-small-bottom {
+         margin: 0 auto;
+         padding-bottom: 10px;
+     }
+  
 }
