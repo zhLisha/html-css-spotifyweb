@@ -333,8 +333,57 @@ img {
 .bottom-actions{
     height: 80px;
     background-color: #282828;
+    color: white;
 }
 
+.bottom-content {
+    width: 100%;
+}
+
+.nav-bottom {
+    width: 100%;
+}
+
+/* left */
+.nav-bottom.left {
+    align-items: center;
+}
+
+.nav-bottom.left img{
+    width: 10%;
+}
+
+.nav-bottom.left .icons,
+.nav-bottom.left .text span {
+    color: var(--grey);
+}
+
+/* center */
+.nav-bottom.center{
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bottom.center i{
+    padding: 0 10px;
+}
+.fa-regular.fa-circle-play{
+    font-size: 27px;
+}
+
+.nav-bottom.center hr {
+    margin: 10px 0;
+    padding: 1px ;
+    border-radius: 10px;
+    background-color: var(--grey);
+}
+
+
+/* right */
+.nav-bottom.right {
+    align-items: center;
+    justify-content: center;
+}
 
 
 
