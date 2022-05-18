@@ -341,6 +341,9 @@ img {
     width: calc(100% / 6);
     padding-right: 10px;
     text-align: center;
+}
+
+.container-hover {
     position: relative;
 }
 
@@ -361,7 +364,7 @@ img {
     color: white;
     position: absolute;
     left: 50%;
-    bottom: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     display: none;
 }
