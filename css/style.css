@@ -344,19 +344,51 @@ img {
 }
 
 /* left */
-.bottom-actions-left{
-
-    /* test */
-    background-color: darksalmon;
+.bottom-actions-left,
+.bottom-actions-left .text {
+    padding-left: 0.8rem;
+}
+.bottom-actions-left img{
+    width: 40px;
 }
 
-.bottom-actions-left img{
-    width: 45px;
+.bottom-actions-left .text {
+    line-height: 0.6rem;
+}
+
+.bottom-actions-left .text h4{
+    font-size: 0.7rem;
+}
+
+.bottom-actions-left a{
+    color: var(--grey);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.bottom-actions-left .text a{
+    font-size: 0.55rem;
+    padding-right: 2rem;
+}
+
+.bottom-actions-left .icons a{
+    padding-left: 0.5rem;
+}
+
+/* hover */
+
+.bottom-actions-left .text a:hover{
+    text-decoration: underline;
+}
+
+.bottom-actions-left a:hover{
+    color: var(--white);
 }
 
 
 /* center */
 .bottom-actions-center{
+    justify-content: center;
 
     /* test */
     background-color: lightpink;
